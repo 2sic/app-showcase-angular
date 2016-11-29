@@ -16,28 +16,33 @@
 		vm.activeCategory = null;
 		vm.appResources = {};
 
-		referenceSvc.getReferences().then(function (result) {
+		var loadedPromise = referenceSvc.getReferences().then(function (result) {
 		    vm.items = result.Default
 		    vm.categories = result.Categories;
 		    vm.appResources = result.AppResources[0];
 		});
 
-		vm.referenceFilter = function (reference) {
-		    if (vm.activeCategory == 'all')
-		        return true;
-			var matches = $filter('filter')(reference.Category, { "Title": vm.activeCategory }, true);
-			return matches.length > 0;
-		};
-
 		$scope.$on('$routeChangeSuccess', function () {
-			vm.activeCategory = $route.current.params.category;
-			window.previousCategory = vm.activeCategory;
-			$window.document.title = vm.activeCategory + " | " + originalPageTitle;
+			loadedPromise.then(function() {
+				var categoryPath = $route.current.params.category;
+
+				if(categoryPath == 'all') {
+					vm.activeCategory = null;
+					$window.document.title = originalPageTitle;
+				}
+				else {
+					vm.activeCategory = $filter('filter')(vm.categories, { "UrlPath": categoryPath }, true)[0];
+					window.previousCategory = vm.activeCategory;
+					$window.document.title = vm.activeCategory.Title + " | " + originalPageTitle;
+				}
+			});
 		});
 
-		vm.getMetaDescription = function () {
-		    var currentCategory = $filter('filter')(vm.categories, { "Title": vm.activeCategory }, true)[0];
-		    return currentCategory != null ? currentCategory.MetaDescription : null;
+		vm.referenceFilter = function (reference) {
+		    if (vm.activeCategory == null)
+		        return true;
+			var matches = $filter('filter')(reference.Category, { "Id": vm.activeCategory.Id }, true);
+			return matches.length > 0;
 		};
 
 	};

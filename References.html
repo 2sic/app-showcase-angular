@@ -4,7 +4,7 @@
     <div ng-view></div>
 
     <script type="text/ng-template" id="referenceList.html">
-        <update-meta name="DESCRIPTION" content="{{vm.getMetaDescription()}}"></update-meta>
+        <update-meta name="DESCRIPTION" content="{{vm.activeCategory.MetaDescription}}"></update-meta>
         <h1>{{vm.appResources.ListTitle}}</h1>
         <div class="clearfix co-reference-categories">
             <div style="float:left;" class="sc-element">
@@ -13,12 +13,12 @@
                 </a>
             </div>
             <div ng-repeat="c in vm.categories" style="float:left;" class="sc-element co-reference-category">
-                <a class="btn btn-default" ng-class="{ 'active': c.Name == vm.activeCategory }" ng-href="{{config.rootUrl}}/cat/{{c.Name}}">
+                <a class="btn btn-default" ng-class="{ 'active': c.UrlPath == vm.activeCategory }" ng-href="{{config.rootUrl}}/cat/{{c.UrlPath}}">
                     {{c.Title}}
                 </a>
                 <sxc-toolbar for-id="c.Id"></sxc-toolbar>
             </div>
-            <ul class="sc-menu" data-toolbar='{ "attributeSetName": "Category", "action":"new" }'></ul>
+            <ul class="sc-menu" data-toolbar='{ "contentType": "Category", "action":"new" }'></ul>
         </div>
         <div class="co-references row">
             <div class="col col-sm-12 col-md-6 sc-element" ng-repeat="ref in vm.items | filter: vm.referenceFilter">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-		<ul class="sc-menu" data-toolbar='{ "attributeSetName": "Reference", "action":"new" }'></ul>
+		<ul class="sc-menu" data-toolbar='{ "contentType": "Reference", "action":"new" }'></ul>
     </script>
 
     <script type="text/ng-template" id="referenceDetail.html">
@@ -94,7 +94,7 @@
                         </tr>
                     </table>
                     <br>
-                    <a class="btn btn-default" href="{{config.rootUrl}}/cat/{{vm.previousCategory}}">&lt; zurück</a>
+                    <a class="btn btn-default" href="{{config.rootUrl}}/cat/{{vm.previousCategory.UrlPath}}">&lt; zurück</a>
                 </div>
             </div>
         </div>

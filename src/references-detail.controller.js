@@ -37,7 +37,7 @@
             });
 
             if (vm.previousCategory == null)
-                vm.previousCategory = vm.r.Category[0].Title;
+                vm.previousCategory = $filter('filter')(result.Categories, { Id:  vm.r.Category[0].Id }, true)[0];
 
             if (vm.r === undefined)
                 $location.path('/');
