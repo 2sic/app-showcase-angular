@@ -57,35 +57,10 @@
                 <div class="col col-sm-12 col-md-6 col-md-pull-6 co-reference-detail-description">
                     <div ng-bind-html="vm.r.trustedDescription"></div><br />
                     <table class="table table-striped co-reference-detail-table">
-                        <tr ng-if="vm.r.Client">
-                            <td>
-                                <strong>Bauherr</strong>
-                            </td>
-                            <td>{{vm.r.Client}}</td>
-                        </tr>
-                        <tr ng-if="vm.r.Architect">
-                            <td>
-                                <strong>Architekt</strong>
-                            </td>
-                            <td>{{vm.r.Architect}}</td>
-                        </tr>
-                        <tr ng-if="vm.r.Management">
-                            <td>
-                                <strong>Bauleitung</strong>
-                            </td>
-                            <td>{{vm.r.Management}}</td>
-                        </tr>
                         <tr ng-if="vm.r.Services">
-                            <td><strong>Unsere Leistungen</strong></td>
+                            <td><strong>Our Services</strong></td>
                             <td>
                                 {{vm.r.Services}}
-                            </td>
-                        </tr>
-                        <tr ng-if="vm.r.StartDate || vm.r.EndDate">
-                            <td><strong>Bauzeit</strong></td>
-                            <td>
-                                <span ng-if="vm.r.StartDate">{{vm.r.StartDate | date: 'MMMM yyyy' }}</span>
-                                <span ng-if="vm.r.EndDate">bis {{vm.r.EndDate | date: 'MMMM yyyy' }}</span>
                             </td>
                         </tr>
                         <tr ng-if="vm.r.trustedLinks">
