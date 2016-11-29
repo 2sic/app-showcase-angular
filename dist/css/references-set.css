@@ -1,0 +1,26 @@
+.co-reference { overflow: hidden; margin: 0 0 35px 0; background: #FDFDFD; }
+.co-reference-detail-description { padding-right: 40px; }
+.co-reference-detail-description table { background:#EFEFEF }
+.co-reference-detail-description table td { padding: 2px 25px 2px 0; }
+
+.co-reference-image-box { overflow: hidden; }
+.co-reference-image-box img, .co-reference-image-box-placeholder { /*min-width: 370px;*/ max-width: 449px; width: 100%; }
+.co-reference-text { position: relative;; padding-right: 30px; padding-bottom: 30px; }
+.co-reference .btn-default { position: absolute; bottom: 20px; right: 30px; }
+.co-reference-text strong { color: #ed1d25; }
+.co-reference-categories { margin-bottom: 35px; }
+.co-reference-categories .btn-default { margin: 0 3px 3px 0; padding: 7px 12px 6px 12px; }
+
+.co-reference-detail-table { table-layout: fixed; }
+.co-reference-detail-table td { word-wrap: break-word; }
+.co-reference-detail-table td:first-child { width: 170px; }
+
+@media screen and (max-width: 767px) {
+	.co-reference-text { padding:15px; }
+	.co-reference-detail-description { padding-right:19px; }
+}
+
+@media screen and (max-width: 499px) {
+	.co-reference .col-xxs { width: 100%; }
+    .co-reference .btn-default { position: relative; right: -15px; }
+}

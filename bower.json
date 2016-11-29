@@ -1,0 +1,28 @@
+{
+  "name": "2sxc-app-references",
+  "description": "A simple, easy to customize showcase / references app for DNN (DotNetNuke)",
+  "main": "index.js",
+  "authors": [
+    "2sic internet solutions Switzerland/Liechtenstein"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dnn",
+    "dotnetnuke",
+    "references",
+    "showcase"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-update-meta": "1.9.0",
+    "owlcarousel": "owl-carousel#1.3.2",
+    "angular-route": "^1.5.9"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "2sxc-app-references",
+  "version": "3.0.0",
+  "description": "A simple, easy to customize showcase / references app for DNN (DotNetNuke)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dnn",
+    "dotnetnuke",
+    "references",
+    "showcase"
+  ],
+  "author": "2sic internet solutions Switzerland/Liechtenstein",
+  "repository": {
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0"
+  }
+}
