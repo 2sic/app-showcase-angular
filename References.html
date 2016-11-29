@@ -8,12 +8,12 @@
         <h1>{{vm.appResources.ListTitle}}</h1>
         <div class="clearfix co-reference-categories">
             <div style="float:left;" class="sc-element">
-                <a class="btn btn-default" ng-class="{ 'active': vm.activeCategory == 'all' }" ng-href="{{config.rootUrl}}/cat/all">
+                <a class="btn btn-default" ng-class="{ 'active': vm.activeCategory == null }" ng-href="{{config.rootUrl}}/cat/all">
                     All
                 </a>
             </div>
             <div ng-repeat="c in vm.categories" style="float:left;" class="sc-element co-reference-category">
-                <a class="btn btn-default" ng-class="{ 'active': c.UrlPath == vm.activeCategory }" ng-href="{{config.rootUrl}}/cat/{{c.UrlPath}}">
+                <a class="btn btn-default" ng-class="{ 'active': c.UrlPath == vm.activeCategory.UrlPath }" ng-href="{{config.rootUrl}}/cat/{{c.UrlPath}}">
                     {{c.Title}}
                 </a>
                 <sxc-toolbar for-id="c.Id"></sxc-toolbar>
