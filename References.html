@@ -1,4 +1,4 @@
-﻿<base href="[Tab:FullUrl]/" />
+<base href="[Tab:FullUrl]/" />
 
 <div sxc-app="references" id="app-[Module:ModuleId]" ng-cloak class="ng-cloak" ng-init="config = { rootUrl: '[Tab:FullUrl]', appPath: '[App:Path]'}">
     <div ng-view></div>
@@ -16,13 +16,13 @@
                 <a class="btn btn-default" ng-class="{ 'active': c.UrlPath == vm.activeCategory.UrlPath }" ng-href="{{config.rootUrl}}/cat/{{c.UrlPath}}">
                     {{c.Title}}
                 </a>
-                <sxc-toolbar for-id="c.Id"></sxc-toolbar>
+                <sxc-toolbar toolbar='{ "entityId": c.Id }'></sxc-toolbar>
             </div>
             <ul class="sc-menu" data-toolbar='{ "contentType": "Category", "action":"new" }'></ul>
         </div>
         <div class="co-references row">
             <div class="col col-sm-12 col-md-6 sc-element" ng-repeat="ref in vm.items | filter: vm.referenceFilter">
-                <sxc-toolbar for-id="ref.Id"></sxc-toolbar>
+                <sxc-toolbar toolbar='{ "entityId": ref.Id }'></sxc-toolbar>
                 <div class="co-reference">
                     <div class="row">
                         <div class="col col-xxs col-xs-6 col-sm-6 co-reference-image-box">
