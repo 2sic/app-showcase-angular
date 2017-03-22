@@ -11,6 +11,7 @@
         var vm = this;
         vm.previousCategory = window.previousCategory;
         vm.r = null;
+        vm.appResources = {};
         vm.owlOptions = {
             items: 1,
             itemsDesktop: false,
@@ -48,6 +49,8 @@
                 window.scrollTo(0, 0);
                 $window.document.title = vm.r.Title + " | " + vm.r.Category.map(function (c) { return c.Title }).join(', ') + " | " + originalPageTitle;
             }
+
+            vm.appResources = result.AppResources[0];
         });
     };
 

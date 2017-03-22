@@ -58,18 +58,18 @@
                     <div ng-bind-html="vm.r.trustedDescription"></div><br />
                     <table class="table table-striped co-reference-detail-table">
                         <tr ng-if="vm.r.Services">
-                            <td><strong>Our Services</strong></td>
+                            <td><strong>{{vm.appResources.LabelOurServices}}</strong></td>
                             <td>
                                 {{vm.r.Services}}
                             </td>
                         </tr>
                         <tr ng-if="vm.r.trustedLinks">
-                            <td><strong>Links</strong></td>
+                            <td><strong>{{vm.appResources.LabelLinks}}</strong></td>
                             <td ng-bind-html="vm.r.trustedLinks"></td>
                         </tr>
                     </table>
                     <br>
-                    <a class="btn btn-default" href="{{config.rootUrl}}/cat/{{vm.previousCategory.UrlPath}}">&lt; zurück</a>
+                    <a class="btn btn-default" href="{{config.rootUrl}}/cat/{{vm.previousCategory.UrlPath}}">&lt; {{vm.appResources.BackButton}}</a>
                 </div>
             </div>
         </div>
