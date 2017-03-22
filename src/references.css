@@ -5,7 +5,7 @@
 
 .co-reference-image-box { overflow: hidden; }
 .co-reference-image-box img, .co-reference-image-box-placeholder { /*min-width: 370px;*/ max-width: 449px; width: 100%; }
-.co-reference-text { position: relative;; padding-right: 30px; padding-bottom: 30px; }
+.co-reference-text { position: relative;; padding-right: 30px; padding-bottom: 30px; font-size:16px;  }
 .co-reference .btn-default { position: absolute; bottom: 20px; right: 30px; }
 .co-reference-text strong { color: #ed1d25; }
 .co-reference-categories { margin-bottom: 35px; }
