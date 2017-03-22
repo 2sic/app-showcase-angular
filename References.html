@@ -18,7 +18,7 @@
                 </a>
                 <sxc-toolbar toolbar='{ "entityId": c.Id }'></sxc-toolbar>
             </div>
-            <ul class="sc-menu" data-toolbar='{ "contentType": "Category", "action":"new" }'></ul>
+            <sxc-toolbar toolbar='{ "contentType": "Category", "action":"new" }' settings='{ "hover": "none" }'></sxc-toolbar>
         </div>
         <div class="co-references row">
             <div class="col col-sm-12 col-md-6 sc-element" ng-repeat="ref in vm.items | filter: vm.referenceFilter">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-		<ul class="sc-menu" data-toolbar='{ "contentType": "Reference", "action":"new" }'></ul>
+        <sxc-toolbar toolbar='{ "contentType": "Reference", "action":"new" }' settings='{ "hover": "none" }'></sxc-toolbar>
     </script>
 
     <script type="text/ng-template" id="referenceDetail.html">
