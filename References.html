@@ -9,14 +9,14 @@
         <div class="clearfix co-reference-categories">
             <div style="float:left;" class="sc-element">
                 <a class="btn btn-default" ng-class="{ 'active': vm.activeCategory == null }" ng-href="{{config.rootUrl}}/cat/all">
-                    All
+                    {{vm.appResources.ButtonAllReferences}}
                 </a>
             </div>
             <div ng-repeat="c in vm.categories" style="float:left;" class="sc-element co-reference-category">
                 <a class="btn btn-default" ng-class="{ 'active': c.UrlPath == vm.activeCategory.UrlPath }" ng-href="{{config.rootUrl}}/cat/{{c.UrlPath}}">
                     {{c.Title}}
                 </a>
-                <sxc-toolbar toolbar='{ "entityId": c.Id }'></sxc-toolbar>
+                <sxc-toolbar toolbar='{ "entityId": c.Id,  "action":"edit" }'></sxc-toolbar>
             </div>
             <sxc-toolbar toolbar='{ "contentType": "Category", "action":"new" }' settings='{ "hover": "none" }'></sxc-toolbar>
         </div>

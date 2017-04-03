@@ -30,7 +30,7 @@ gulp.task("import-library", function () {
 });
 
 gulp.task("build-css", function() {
-    gulp.src("src/*.css")
+    gulp.src("src/**/*.css")
         .pipe(concat('references-set.css')) 
         .pipe(gulp.dest("dist/css"));
 });
